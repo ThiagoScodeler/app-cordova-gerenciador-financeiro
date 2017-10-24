@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="dist/css/framework7.material.colors.min.css">
   <!-- Path to your custom app styles-->
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="//cdn.framework7.io/css/framework7-icons.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body class="theme-green layout-white">
@@ -28,27 +29,27 @@
     <div class="content-block">
       <div class="content-block-title">Menu</div>
       <div class="list-block">
-          <a href="index.html" class="item-link">
-            <div class="item-content">
-              <div class="item-inner">
-                <div class="item-title f7-demo-icon"><i class="f7-icons">home</i> Home</div>
-              </div>
+        <a href="index.html" class="item-link">
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title"> <span class="glyphicon glyphicon-home"></span> Home</div>
             </div>
-          </a>
-          <a href="lancamentos.html" class="item-link">
-            <div class="item-content">
-              <div class="item-inner">
-                <div class="item-title f7-demo-icon"><i class="f7-icons">list_fill</i> Lançamentos</div>
-              </div>
+          </div>
+        </a>
+        <a href="lancamentos.html" class="item-link">
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title"> <span class="glyphicon glyphicon-list-alt"></span> Lançamentos</div>
             </div>
-          </a>
-          <a href="form.html" class="item-link">
-            <div class="item-content">
-              <div class="item-inner">
-                <div class="item-title f7-demo-icon"><i class="f7-icons">add_round_fill</i> Novo Lançamento</div>
-              </div>
+          </div>
+        </a>
+        <a href="form.html" class="item-link">
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title"> <span class="glyphicon glyphicon-plus"></span> Novo Lançamento</div>
             </div>
-          </a>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -60,7 +61,7 @@
       <div class="navbar">
         <div class="navbar-inner">
           <!-- We have home navbar without left link-->
-          <div class="center sliding color-white f7-demo-icon"><i class="f7-icons">money_dollar</i> App Gerenciador Financeiro</div>
+          <div class="center sliding color-white"><span class="glyphicon glyphicon-tasks"></span> App Gerenciador Financeiro</div>
           <div class="right">
             <!-- Right link contains only icon - additional "icon-only" class-->
             <a href="#" class="link icon-only open-addTodo">
@@ -77,10 +78,10 @@
           <div class="page-content">
             <div class="content-block">
               <div class="content-block-inner">
-                <p class="item-title f7-demo-icon"><i class="f7-icons">money_dollar_fill</i> Saldo: </p>
-                <p class="item-title f7-demo-icon"><i class="f7-icons">arrow_right_fill</i> Entradas: </p>
-                <p class="item-title f7-demo-icon"><i class="f7-icons">bag_fill</i> Compras / Saídas: </p>
-                <p class="item-title f7-demo-icon"><i class="f7-icons">flag_fill</i> Contas à pagar: </p>
+                <p class="item-title"> <span class="glyphicon glyphicon-usd"></span> Saldo: </p>
+                <p class="item-title"> <span class="glyphicon glyphicon-arrow-right"></span> Entradas: </p>
+                <p class="item-title"> <span class="glyphicon glyphicon-shopping-cart"></span> Compras / Saídas: </p>
+                <p class="item-title"> <span class="glyphicon glyphicon-flag"></span> Contas à pagar: </p>
               </div>
             </div>
             <div class="content-block-title">Menu</div>
@@ -90,7 +91,7 @@
                   <a href="lancamentos.html" class="item-link">
                     <div class="item-content">
                       <div class="item-inner">
-                        <div class="item-title f7-demo-icon"><i class="f7-icons">list_fill</i> Lançamentos</div>
+                        <div class="item-title"><span class="glyphicon glyphicon-list-alt"> Lançamentos</div>
                       </div>
                     </div>
                   </a>
@@ -99,7 +100,7 @@
                   <a href="form.html" class="item-link">
                     <div class="item-content">
                       <div class="item-inner">
-                        <div class="item-title f7-demo-icon"><i class="f7-icons">add_round_fill</i> Novo Lançamento</div>
+                        <div class="item-title"><span class="glyphicon glyphicon-plus"> Novo Lançamento</div>
                       </div>
                     </div>
                   </a>
@@ -117,10 +118,12 @@
   <!-- Framework7 scripts-->
   <script type="text/javascript" src="dist/js/framework7.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <!-- Bootstrap scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- App Gerenciador Financeiro-->
   <script type="text/javascript" src=""></script>
   <script type="text/javascript" src=""></script>
   <script type="text/javascript" src=""></script>
 </body>
-
 </html>
