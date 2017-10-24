@@ -1,28 +1,46 @@
 <!-- Top Navbar-->
 <div class="navbar">
-    <div class="navbar-inner">
-      <div class="left">
-          <a href="#" class="back link"> 
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link"> 
             <i class="icon icon-back"></i>
             <span>Voltar</span>
           </a>
-      </div>
-      <div class="right">
-        <!-- Right link contains only icon - additional "icon-only" class-->
-        <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-      </div>
+    </div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class-->
+      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
     </div>
   </div>
-  <div class="pages">
-    <!-- Page, data-page contains page name-->
-    <div data-page="about" class="page">
-      <!-- Scrollable page content-->
-      <div class="page-content">
-        <div class="content-block">
-          <div class="content-block-inner">
-           <p>Lançamentos</p>
-          </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="lancamentos" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+          <p>Lançamentos</p>
+          <div class="data-table card">
+            <table>
+              <thead>
+                <tr>
+                  <th class="label-cell">Data</th>
+                  <th class="label-cell">Descrição</th>
+                  <th class="numeric-cell">Valor</th>
+                  <th class="label-cell">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="label-cell">14-10-2017</td>
+                  <td class="label-cell">Cerveja</td>
+                  <td class="numeric-cell">159</td>
+                  <td class="label-cell">Saída</td>
+                </tr>    
+              </tbody>
+            </table>
         </div>
       </div>
     </div>
-  </div>  
+  </div>
+</div>

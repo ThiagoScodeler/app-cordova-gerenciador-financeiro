@@ -10,3 +10,8 @@ var mainView = myApp.addView('.view-main', {
     // Configurado para o modo de navegação dinâmico
     dynamicNavbar: true
 });
+
+$$('.form-to-data').on('click', function(){
+  var formData = myApp.formToData('#my-form');
+  alert(JSON.stringify(formData));
+}); 

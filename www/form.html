@@ -2,80 +2,97 @@
 <div class="navbar">
   <div class="navbar-inner">
     <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Voltar</span></a></div>
-      <div class="right">
-        <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-      </div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
     </div>
   </div>
+</div>
 </div>
 <div class="pages">
   <!-- Page, data-page contains page name-->
   <div data-page="form" class="page">
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="content-block-title">Lançamento</div>
-      <div class="list-block">
-        <ul>
-          <li>
-            <div class="item-content">
-              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
-              <div class="item-inner">
-                <div class="item-title label">Data</div>
-                <div class="item-input">
-                  <input type="date" placeholder="" value="" />
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="item-content">
-              <div class="item-media"><i class="icon icon-form-name"></i></div>
-              <div class="item-inner">
-                <div class="item-title label">Descrição</div>
-                <div class="item-input">
-                  <input type="text" placeholder="Digite aqui" />
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="content-block-title">Tipo</div>
-      <div class="list-block">
-        <ul>
-          <li>
-            <label class="label-radio item-content">
-                <input type="radio" name="ks-radio" value="Entrada" checked="checked"/>
+      <div class="content-block">
+        <div class="content-block-title">Novo Lançamento</div>
+        <form id="my-form" class="list-block">
+          <ul>
+            <li>
+              <div class="item-content">
                 <div class="item-inner">
-                  <div class="item-title">Entrada</div>
+                  <div class="item-title label">Data</div>
+                  <div class="item-input">
+                    <input type="date" name="data" placeholder="">
+                  </div>
                 </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Descrição</div>
+                  <div class="item-input">
+                    <input type="text" name="descricao" placeholder="Descrição Lançamento">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Valor</div>
+                  <div class="item-input">
+                    <input type="text" name="valor" placeholder="Valor Lançamento">
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="content-block-title">Tipo</div>
+          <div class="list-block">
+            <ul>
+              <!-- Single radio input -->
+              <li>
+                <label class="label-radio item-content">
+              <!-- Checked by default -->
+              <input type="radio" name="my-radio" value="entrada" checked="checked">
+              <div class="item-media">
+                <i class="icon icon-form-radio"></i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title">Entrada</div>
+              </div>
               </label>
-          </li>
-          <li>
-            <label class="label-radio item-content">
-                <input type="radio" name="ks-radio" value="Saida"/>
+              </li>
+              <!-- Another radio input -->
+              <li>
+                <label class="label-radio item-content">
+                <input type="radio" name="my-radio" value="saida">
+                <div class="item-media">
+                  <i class="icon icon-form-radio"></i>
+                </div>
                 <div class="item-inner">
                   <div class="item-title">Saida</div>
                 </div>
               </label>
-          </li>
-          <li>
-            <label class="label-radio item-content">
-                <input type="radio" name="ks-radio" value="A Pagar"/>
-                <div class="item-inner">
-                  <div class="item-title">A pagar</div>
-                </div>
-              </label>
-          </li>
-        </ul>
-      </div>
-       <div class="content-block">
-        <div class="row">
-          <div class="col-50"><a href="#" class="button button-big button-fill color-red">Cancel</a></div>
-          <div class="col-50">
-            <input type="submit" value="Submit" class="button button-big button-fill color-green" />
+              </li>
+              <li>
+                <label class="label-radio item-content">
+                    <input type="radio" name="my-radio" value="apagar">
+                    <div class="item-media">
+                      <i class="icon icon-form-radio"></i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">A pagar</div>
+                    </div>
+                  </label>
+              </li>
+            </ul>
           </div>
-        </div>
+        </form>
+      </div>
+      <div class="content-block">
+        <a href="#" class="button button-big button-fill color-green form-to-data">Submit</a>
       </div>
     </div>
   </div>

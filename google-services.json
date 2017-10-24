@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "59433012615",
+    "firebase_url": "https://appgerenciadorfinanceiro.firebaseio.com",
+    "project_id": "appgerenciadorfinanceiro",
+    "storage_bucket": "appgerenciadorfinanceiro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59433012615:android:52abd497a4710ff9",
+        "android_client_info": {
+          "package_name": "br.dm108pos.appgerenciadorfinanceiro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59433012615-t358013f4milp60l12s0ojb6k0nabmb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6x3_eeptgb2FSYruKtm0p34SBedcjxJQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
