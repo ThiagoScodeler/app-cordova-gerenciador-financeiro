@@ -40,7 +40,7 @@
     <platform name="browser">
         <preference name="SplashScreen" value="/img/logo-original.png" />
         <preference name="SplashScreenDelay" value="3000" />
-        <preference name="SplashScreenBackgroundColor" value="green" />
+        <preference name="SplashScreenBackgroundColor" value="blue" />
         <preference name="ShowSplashScreen" value="true" />
         <preference name="SplashScreenWidth" value="170" />
         <preference name="SplashScreenHeight" value="200" />
