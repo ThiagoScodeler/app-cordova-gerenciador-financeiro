@@ -7,24 +7,33 @@ var GerenciadorService = {
         lancamento.id = this.lancamentos.length;
         this.lancamentos.push(lancamento);
 
+        NativeStorage.setItem("lancamentos", this.lancamentos,
+            function onSuccess(obj) {
+                console.log(obj);
+            },
+            function onError(err) {
+                console.log(err.code);
+            }
+        );
+
         /* Enviar Notificação após novo Lançamento
         Exemplo de Utilização do FIREBASE CLOUD MESSAGING */
         var keyServer = "AAAADdZ7zYc:APA91bEXgbcn7J2nNtinlcdOjK9_25jyi93jU6O6PX7l-q2XIiPlSxhiQNiZsV2JPf5zbFmGh86IEeOVCmqEgYhm1mpH-ZXSwYUhkCo8aSMKG5FBNYFFAW8Qe3BtS-GFS_vwTHKakQSA";
 
         var notificationMessage = JSON.stringify({
-                "data": {
-                    "data": lancamento.data,
-                    "descrição": lancamento.descricao,
-                    "valor": lancamento.valor,
-                    "tipo": lancamento.tipo,
-                },
-                "priority": "high",
-                "notification": {
-                    "body": "Detalhes",
-                    "title": "Novo Lançamento"
-                },
-                "to": "/topics/lancamentos"
-            })
+            "data": {
+                "data": lancamento.data,
+                "descrição": lancamento.descricao,
+                "valor": lancamento.valor,
+                "tipo": lancamento.tipo,
+            },
+            "priority": "high",
+            "notification": {
+                "body": "Detalhes",
+                "title": "Novo Lançamento"
+            },
+            "to": "/topics/lancamentos"
+        })
 
         $.ajax({
             type: 'POST',
@@ -45,7 +54,21 @@ var GerenciadorService = {
     },
 
     listar: function () {
-        return this.lancamentos;
+        var listaLancamentos = "";
+
+        if (this.lancamentos.length != 0) {
+            NativeStorage.getItem("lancamentos",
+                function onSuccess(obj) {
+                    console.log(obj);
+                    listaLancamentos = obj;
+                },
+                function onError(err) {
+                    console.log(err.code);
+                }
+            );
+        }
+
+        return listaLancamentos;
     },
 
     listarStatus: function () {
@@ -54,14 +77,27 @@ var GerenciadorService = {
         var apagar = 0;
         var saldo = 0;
 
-        for (var i = 0; i < this.lancamentos.length; i++) {
-            if (this.lancamentos[i].tipo == 'entrada') {
-                entrada += parseInt(this.lancamentos[i].valor);
-            }
-            if (this.lancamentos[i].tipo == 'saida') {
-                saida += parseInt(this.lancamentos[i].valor);
-            } if (this.lancamentos[i].tipo == 'apagar') {
-                apagar += parseInt(this.lancamentos[i].valor);
+        var listaLancamentos = "";
+        if (this.lancamentos.length != 0) {
+            NativeStorage.getItem("lancamentos",
+                function onSuccess(obj) {
+                    console.log(obj);
+                    listaLancamentos = obj;
+                },
+                function onError(err) {
+                    console.log(err.code);
+                }
+            );
+
+            for (var i = 0; i < listaLancamentos.length; i++) {
+                if (listaLancamentos[i].tipo == 'entrada') {
+                    entrada += parseFloat(listaLancamentos[i].valor);
+                }
+                if (listaLancamentos[i].tipo == 'saida') {
+                    saida += parseFloat(listaLancamentos[i].valor);
+                } if (listaLancamentos[i].tipo == 'apagar') {
+                    apagar += parseFloat(listaLancamentos[i].valor);
+                }
             }
         }
 
@@ -73,6 +109,15 @@ var GerenciadorService = {
             apagar: apagar,
             saldo: saldo
         };
+
+        NativeStorage.setItem("status", status,
+            function onSuccess(obj) {
+                console.log(obj);
+            },
+            function onError(err) {
+                console.log(err.code);
+            }
+        );
 
         return status;
     }
