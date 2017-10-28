@@ -30,7 +30,7 @@ cordova platform add browser
 cordova platform add android
 ```
 
-## Teste
+### Teste
 
 Para rodar a aplicação execute ```cordova run <platform>``` especificando a plataforma desejada.
 
