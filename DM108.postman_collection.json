@@ -1,0 +1,36 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DM108",
+		"_postman_id": "5c0dc4c7-e1a4-2bc2-a7b6-030132eae623",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send Notification",
+			"request": {
+				"url": " https://fcm.googleapis.com/fcm/send",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AAAADdZ7zYc:APA91bEXgbcn7J2nNtinlcdOjK9_25jyi93jU6O6PX7l-q2XIiPlSxhiQNiZsV2JPf5zbFmGh86IEeOVCmqEgYhm1mpH-ZXSwYUhkCo8aSMKG5FBNYFFAW8Qe3BtS-GFS_vwTHKakQSA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"data\": \"28-10-2017\",\r\n    \"descrição\": \"salario\",\r\n    \"valor\": \"333333\",\r\n    \"tipo\": \"entrada\"\r\n  },\r\n  \"priority\": \"high\",\r\n  \"notification\": {\r\n    \"body\": \"Detalhes\",\r\n    \"title\": \"Novo Lançamento\"\r\n  },\r\n  \"to\": \"/topics/lancamentos\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
